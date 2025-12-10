@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>آموزش واژگان درس 4 - My Health</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700&family=Poppins:wght@300;400;500&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap">
     <style>
         * {
             margin: 0;
@@ -31,18 +31,58 @@
         /* هدر با مشخصات طراح در بالا */
         .designer-header-top {
             text-align: center;
-            padding: 8px 0;
-            margin-bottom: 15px;
-            color: #5d5d5d;
-            font-size: 0.8rem;
+            padding: 15px 0;
+            margin-bottom: 25px;
+            color: #ffffff;
+            font-size: 1.1rem;
             font-family: 'Poppins', sans-serif;
-            letter-spacing: 0.5px;
-            border-bottom: 1px dashed #ccc;
+            letter-spacing: 0.8px;
+            background: linear-gradient(90deg, #1565c0, #f06292, #ba68c8);
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(21, 101, 192, 0.3);
+            position: relative;
+            overflow: hidden;
+            animation: gradientShift 6s ease infinite;
+            background-size: 200% 200%;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .designer-header-top::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            animation: shine 3s ease infinite;
+        }
+        
+        @keyframes shine {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
         }
         
         .designer-header-top span {
-            color: #1565c0;
-            font-weight: 600;
+            color: #fff;
+            font-weight: 700;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 2;
+            padding: 0 20px;
+        }
+        
+        .header-separator {
+            margin: 0 15px;
+            color: rgba(255, 255, 255, 0.8);
         }
         
         header {
@@ -177,6 +217,7 @@
             display: flex;
             gap: 15px;
             margin-top: 15px;
+            flex-wrap: wrap;
         }
         
         .audio-btn {
@@ -207,6 +248,15 @@
         
         .audio-btn.example-btn:hover {
             background: #ec407a;
+        }
+        
+        .audio-btn.sentence-btn {
+            background: #ba68c8;
+            box-shadow: 0 4px 10px rgba(186, 104, 200, 0.3);
+        }
+        
+        .audio-btn.sentence-btn:hover {
+            background: #ab47bc;
         }
         
         /* کادر طراح شناور در پایین صفحه */
@@ -286,6 +336,21 @@
         }
         
         @media (max-width: 768px) {
+            .designer-header-top {
+                font-size: 0.9rem;
+                padding: 12px 0;
+            }
+            
+            .header-content {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+            }
+            
+            .header-separator {
+                display: none;
+            }
+            
             .floating-designer {
                 width: 90%;
                 max-width: 280px;
@@ -304,10 +369,6 @@
             .vocabulary-grid {
                 grid-template-columns: 1fr;
             }
-            
-            .designer-header-top {
-                font-size: 0.7rem;
-            }
         }
         
         @media (max-width: 480px) {
@@ -323,13 +384,23 @@
                 width: 50px;
                 height: 50px;
             }
+            
+            .audio-controls {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
 <body>
     <!-- مشخصات طراح در بالای صفحه -->
     <div class="designer-header-top">
-        طراح: <span>A.R. Yousefzadeh</span> | Lesson 4: My Health | Grade 8
+        <div class="header-content">
+            Designer: <span>A.R. Yousefzadeh</span>
+            <span class="header-separator">|</span>
+            Lesson 4: My Health
+            <span class="header-separator">|</span>
+            Grade 8
+        </div>
     </div>
     
     <div class="container">
@@ -368,7 +439,7 @@
                 example: "The patient needs to rest.",
                 examplePersian: "بیمار نیاز به استراحت دارد.",
                 wordAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/patient--_gb_1.mp3",
-                exampleAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/patient--_gb_1.mp3"
+                sentenceAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/patient--_gb_1.mp3" // در حالت واقعی باید آدرس جمله باشد
             },
             {
                 word: "cough",
@@ -377,7 +448,7 @@
                 example: "He has a bad cough.",
                 examplePersian: "او سرفه بدی دارد.",
                 wordAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/cough--_gb_1.mp3",
-                exampleAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/cough--_gb_1.mp3"
+                sentenceAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/cough--_gb_1.mp3"
             },
             {
                 word: "headache",
@@ -386,7 +457,7 @@
                 example: "I have a terrible headache.",
                 examplePersian: "من سردرد وحشتناکی دارم.",
                 wordAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/headache--_gb_1.mp3",
-                exampleAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/headache--_gb_1.mp3"
+                sentenceAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/headache--_gb_1.mp3"
             },
             {
                 word: "sneeze",
@@ -395,7 +466,7 @@
                 example: "Cover your mouth when you sneeze.",
                 examplePersian: "موقع عطسه کردن دهان خود را بپوشانید.",
                 wordAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/sneeze--_gb_1.mp3",
-                exampleAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/sneeze--_gb_1.mp3"
+                sentenceAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/sneeze--_gb_1.mp3"
             },
             {
                 word: "backache",
@@ -404,7 +475,7 @@
                 example: "She suffers from backache.",
                 examplePersian: "او از کمردرد رنج می‌برد.",
                 wordAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/backache--_gb_1.mp3",
-                exampleAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/backache--_gb_1.mp3"
+                sentenceAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/backache--_gb_1.mp3"
             },
             {
                 word: "have a temperature",
@@ -413,7 +484,7 @@
                 example: "The child has a temperature.",
                 examplePersian: "بچه تب دارد.",
                 wordAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/temperature--_gb_1.mp3",
-                exampleAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/temperature--_gb_1.mp3"
+                sentenceAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/temperature--_gb_1.mp3"
             },
             {
                 word: "toothache",
@@ -422,7 +493,7 @@
                 example: "I can't eat because of toothache.",
                 examplePersian: "من به خاطر دندان درد نمی‌توانم غذا بخورم.",
                 wordAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/toothache--_gb_1.mp3",
-                exampleAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/toothache--_gb_1.mp3"
+                sentenceAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/toothache--_gb_1.mp3"
             },
             {
                 word: "hospital",
@@ -431,7 +502,7 @@
                 example: "She works in a hospital.",
                 examplePersian: "او در یک بیمارستان کار می‌کند.",
                 wordAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/hospital--_gb_1.mp3",
-                exampleAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/hospital--_gb_1.mp3"
+                sentenceAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/hospital--_gb_1.mp3"
             },
             {
                 word: "stomach ache",
@@ -440,7 +511,7 @@
                 example: "He has a stomach ache.",
                 examplePersian: "او دل درد دارد.",
                 wordAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/stomach--_gb_1.mp3",
-                exampleAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/stomach--_gb_1.mp3"
+                sentenceAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/stomach--_gb_1.mp3"
             },
             {
                 word: "doctor",
@@ -449,7 +520,7 @@
                 example: "You should see a doctor.",
                 examplePersian: "باید به دکتر مراجعه کنی.",
                 wordAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/doctor--_gb_1.mp3",
-                exampleAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/doctor--_gb_1.mp3"
+                sentenceAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/doctor--_gb_1.mp3"
             },
             {
                 word: "sore eyes",
@@ -458,7 +529,7 @@
                 example: "My eyes are sore.",
                 examplePersian: "چشم‌هایم درد می‌کنند.",
                 wordAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/sore--_gb_1.mp3",
-                exampleAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/sore--_gb_1.mp3"
+                sentenceAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/sore--_gb_1.mp3"
             },
             {
                 word: "nurse",
@@ -467,7 +538,7 @@
                 example: "The nurse is very kind.",
                 examplePersian: "پرستار بسیار مهربان است.",
                 wordAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/nurse--_gb_1.mp3",
-                exampleAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/nurse--_gb_1.mp3"
+                sentenceAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/nurse--_gb_1.mp3"
             },
             {
                 word: "sore throat",
@@ -476,7 +547,7 @@
                 example: "I have a sore throat.",
                 examplePersian: "من گلو درد دارم.",
                 wordAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/throat--_gb_1.mp3",
-                exampleAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/throat--_gb_1.mp3"
+                sentenceAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/throat--_gb_1.mp3"
             },
             {
                 word: "drugstore",
@@ -485,7 +556,7 @@
                 example: "I need to go to the drugstore.",
                 examplePersian: "من باید به داروخانه بروم.",
                 wordAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/drugstore--_us_1.mp3",
-                exampleAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/drugstore--_us_1.mp3"
+                sentenceAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/drugstore--_us_1.mp3"
             },
             {
                 word: "running nose",
@@ -494,7 +565,7 @@
                 example: "She has a running nose.",
                 examplePersian: "او آبریزش بینی دارد.",
                 wordAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/running--_gb_1.mp3",
-                exampleAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/running--_gb_1.mp3"
+                sentenceAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/running--_gb_1.mp3"
             },
             {
                 word: "mumps",
@@ -503,7 +574,7 @@
                 example: "Mumps is a childhood illness.",
                 examplePersian: "اوریون یک بیماری دوران کودکی است.",
                 wordAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/mumps--_gb_1.mp3",
-                exampleAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/mumps--_gb_1.mp3"
+                sentenceAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/mumps--_gb_1.mp3"
             },
             {
                 word: "measles",
@@ -512,7 +583,7 @@
                 example: "Measles can be prevented by vaccine.",
                 examplePersian: "سرخک با واکسن قابل پیشگیری است.",
                 wordAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/measles--_gb_1.mp3",
-                exampleAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/measles--_gb_1.mp3"
+                sentenceAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/measles--_gb_1.mp3"
             }
         ];
 
@@ -537,8 +608,11 @@
                             <button class="audio-btn word-btn" data-audio="${item.wordAudio}" data-word="${item.word}">
                                 <i class="fas fa-volume-up"></i> تلفظ واژه
                             </button>
-                            <button class="audio-btn example-btn" data-audio="${item.exampleAudio}" data-word="${item.word}">
-                                <i class="fas fa-play-circle"></i> پخش مثال
+                            <button class="audio-btn example-btn" data-audio="${item.wordAudio}" data-word="${item.word}">
+                                <i class="fas fa-redo"></i> تکرار واژه
+                            </button>
+                            <button class="audio-btn sentence-btn" data-audio="${item.sentenceAudio}" data-word="${item.word}">
+                                <i class="fas fa-play-circle"></i> تلفظ جمله
                             </button>
                         </div>
                     </div>
@@ -552,14 +626,25 @@
                 button.addEventListener('click', function() {
                     const audioUrl = this.getAttribute('data-audio');
                     const word = this.getAttribute('data-word');
-                    playAudio(audioUrl, word);
+                    const buttonType = Array.from(this.classList).find(cls => cls.includes('btn'));
+                    playAudio(audioUrl, word, buttonType);
                 });
             });
         }
 
         // تابع پخش صدا
-        function playAudio(url, word) {
+        function playAudio(url, word, buttonType) {
             const audio = new Audio(url);
+            
+            // نمایش پیام مناسب برای هر نوع دکمه
+            const buttonMessages = {
+                'word-btn': `در حال پخش تلفظ واژه "${word}"...`,
+                'example-btn': `در حال تکرار تلفظ واژه "${word}"...`,
+                'sentence-btn': `در حال پخش تلفظ جمله مثال برای "${word}"...`
+            };
+            
+            // در محیط واقعی، این پیام می‌تواند به کاربر نشان داده شود
+            console.log(buttonMessages[buttonType] || `در حال پخش صدا برای "${word}"...`);
             
             audio.play().catch(error => {
                 console.log(`خطا در پخش صدا برای ${word}:`, error);
