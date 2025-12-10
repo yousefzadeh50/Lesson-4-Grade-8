@@ -241,15 +241,6 @@
             transform: scale(1.05);
         }
         
-        .audio-btn.example-btn {
-            background: #f06292;
-            box-shadow: 0 4px 10px rgba(240, 98, 146, 0.3);
-        }
-        
-        .audio-btn.example-btn:hover {
-            background: #ec407a;
-        }
-        
         .audio-btn.sentence-btn {
             background: #ba68c8;
             box-shadow: 0 4px 10px rgba(186, 104, 200, 0.3);
@@ -430,7 +421,7 @@
     </footer>
 
     <script>
-        // داده‌های واژگان درس 4
+        // داده‌های واژگان درس 4 با فایل‌های صوتی واقعی برای جملات
         const vocabularyData = [
             {
                 word: "patient",
@@ -439,7 +430,7 @@
                 example: "The patient needs to rest.",
                 examplePersian: "بیمار نیاز به استراحت دارد.",
                 wordAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/patient--_gb_1.mp3",
-                sentenceAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/patient--_gb_1.mp3" // در حالت واقعی باید آدرس جمله باشد
+                sentenceAudio: "https://translate.google.com/translate_tts?ie=UTF-8&q=The%20patient%20needs%20to%20rest.&tl=en&total=1&idx=0&textlen=28&client=tw-ob&prev=input&ttsspeed=0.5"
             },
             {
                 word: "cough",
@@ -448,7 +439,7 @@
                 example: "He has a bad cough.",
                 examplePersian: "او سرفه بدی دارد.",
                 wordAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/cough--_gb_1.mp3",
-                sentenceAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/cough--_gb_1.mp3"
+                sentenceAudio: "https://translate.google.com/translate_tts?ie=UTF-8&q=He%20has%20a%20bad%20cough.&tl=en&total=1&idx=0&textlen=20&client=tw-ob&prev=input&ttsspeed=0.5"
             },
             {
                 word: "headache",
@@ -457,7 +448,7 @@
                 example: "I have a terrible headache.",
                 examplePersian: "من سردرد وحشتناکی دارم.",
                 wordAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/headache--_gb_1.mp3",
-                sentenceAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/headache--_gb_1.mp3"
+                sentenceAudio: "https://translate.google.com/translate_tts?ie=UTF-8&q=I%20have%20a%20terrible%20headache.&tl=en&total=1&idx=0&textlen=30&client=tw-ob&prev=input&ttsspeed=0.5"
             },
             {
                 word: "sneeze",
@@ -466,7 +457,7 @@
                 example: "Cover your mouth when you sneeze.",
                 examplePersian: "موقع عطسه کردن دهان خود را بپوشانید.",
                 wordAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/sneeze--_gb_1.mp3",
-                sentenceAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/sneeze--_gb_1.mp3"
+                sentenceAudio: "https://translate.google.com/translate_tts?ie=UTF-8&q=Cover%20your%20mouth%20when%20you%20sneeze.&tl=en&total=1&idx=0&textlen=38&client=tw-ob&prev=input&ttsspeed=0.5"
             },
             {
                 word: "backache",
@@ -475,7 +466,7 @@
                 example: "She suffers from backache.",
                 examplePersian: "او از کمردرد رنج می‌برد.",
                 wordAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/backache--_gb_1.mp3",
-                sentenceAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/backache--_gb_1.mp3"
+                sentenceAudio: "https://translate.google.com/translate_tts?ie=UTF-8&q=She%20suffers%20from%20backache.&tl=en&total=1&idx=0&textlen=27&client=tw-ob&prev=input&ttsspeed=0.5"
             },
             {
                 word: "have a temperature",
@@ -484,7 +475,7 @@
                 example: "The child has a temperature.",
                 examplePersian: "بچه تب دارد.",
                 wordAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/temperature--_gb_1.mp3",
-                sentenceAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/temperature--_gb_1.mp3"
+                sentenceAudio: "https://translate.google.com/translate_tts?ie=UTF-8&q=The%20child%20has%20a%20temperature.&tl=en&total=1&idx=0&textlen=30&client=tw-ob&prev=input&ttsspeed=0.5"
             },
             {
                 word: "toothache",
@@ -493,7 +484,7 @@
                 example: "I can't eat because of toothache.",
                 examplePersian: "من به خاطر دندان درد نمی‌توانم غذا بخورم.",
                 wordAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/toothache--_gb_1.mp3",
-                sentenceAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/toothache--_gb_1.mp3"
+                sentenceAudio: "https://translate.google.com/translate_tts?ie=UTF-8&q=I%20can't%20eat%20because%20of%20toothache.&tl=en&total=1&idx=0&textlen=37&client=tw-ob&prev=input&ttsspeed=0.5"
             },
             {
                 word: "hospital",
@@ -502,7 +493,7 @@
                 example: "She works in a hospital.",
                 examplePersian: "او در یک بیمارستان کار می‌کند.",
                 wordAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/hospital--_gb_1.mp3",
-                sentenceAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/hospital--_gb_1.mp3"
+                sentenceAudio: "https://translate.google.com/translate_tts?ie=UTF-8&q=She%20works%20in%20a%20hospital.&tl=en&total=1&idx=0&textlen=27&client=tw-ob&prev=input&ttsspeed=0.5"
             },
             {
                 word: "stomach ache",
@@ -511,7 +502,7 @@
                 example: "He has a stomach ache.",
                 examplePersian: "او دل درد دارد.",
                 wordAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/stomach--_gb_1.mp3",
-                sentenceAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/stomach--_gb_1.mp3"
+                sentenceAudio: "https://translate.google.com/translate_tts?ie=UTF-8&q=He%20has%20a%20stomach%20ache.&tl=en&total=1&idx=0&textlen=25&client=tw-ob&prev=input&ttsspeed=0.5"
             },
             {
                 word: "doctor",
@@ -520,7 +511,7 @@
                 example: "You should see a doctor.",
                 examplePersian: "باید به دکتر مراجعه کنی.",
                 wordAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/doctor--_gb_1.mp3",
-                sentenceAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/doctor--_gb_1.mp3"
+                sentenceAudio: "https://translate.google.com/translate_tts?ie=UTF-8&q=You%20should%20see%20a%20doctor.&tl=en&total=1&idx=0&textlen=27&client=tw-ob&prev=input&ttsspeed=0.5"
             },
             {
                 word: "sore eyes",
@@ -529,7 +520,7 @@
                 example: "My eyes are sore.",
                 examplePersian: "چشم‌هایم درد می‌کنند.",
                 wordAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/sore--_gb_1.mp3",
-                sentenceAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/sore--_gb_1.mp3"
+                sentenceAudio: "https://translate.google.com/translate_tts?ie=UTF-8&q=My%20eyes%20are%20sore.&tl=en&total=1&idx=0&textlen=19&client=tw-ob&prev=input&ttsspeed=0.5"
             },
             {
                 word: "nurse",
@@ -538,7 +529,7 @@
                 example: "The nurse is very kind.",
                 examplePersian: "پرستار بسیار مهربان است.",
                 wordAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/nurse--_gb_1.mp3",
-                sentenceAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/nurse--_gb_1.mp3"
+                sentenceAudio: "https://translate.google.com/translate_tts?ie=UTF-8&q=The%20nurse%20is%20very%20kind.&tl=en&total=1&idx=0&textlen=25&client=tw-ob&prev=input&ttsspeed=0.5"
             },
             {
                 word: "sore throat",
@@ -547,7 +538,7 @@
                 example: "I have a sore throat.",
                 examplePersian: "من گلو درد دارم.",
                 wordAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/throat--_gb_1.mp3",
-                sentenceAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/throat--_gb_1.mp3"
+                sentenceAudio: "https://translate.google.com/translate_tts?ie=UTF-8&q=I%20have%20a%20sore%20throat.&tl=en&total=1&idx=0&textlen=24&client=tw-ob&prev=input&ttsspeed=0.5"
             },
             {
                 word: "drugstore",
@@ -556,7 +547,7 @@
                 example: "I need to go to the drugstore.",
                 examplePersian: "من باید به داروخانه بروم.",
                 wordAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/drugstore--_us_1.mp3",
-                sentenceAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/drugstore--_us_1.mp3"
+                sentenceAudio: "https://translate.google.com/translate_tts?ie=UTF-8&q=I%20need%20to%20go%20to%20the%20drugstore.&tl=en&total=1&idx=0&textlen=33&client=tw-ob&prev=input&ttsspeed=0.5"
             },
             {
                 word: "running nose",
@@ -565,7 +556,7 @@
                 example: "She has a running nose.",
                 examplePersian: "او آبریزش بینی دارد.",
                 wordAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/running--_gb_1.mp3",
-                sentenceAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/running--_gb_1.mp3"
+                sentenceAudio: "https://translate.google.com/translate_tts?ie=UTF-8&q=She%20has%20a%20running%20nose.&tl=en&total=1&idx=0&textlen=27&client=tw-ob&prev=input&ttsspeed=0.5"
             },
             {
                 word: "mumps",
@@ -574,7 +565,7 @@
                 example: "Mumps is a childhood illness.",
                 examplePersian: "اوریون یک بیماری دوران کودکی است.",
                 wordAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/mumps--_gb_1.mp3",
-                sentenceAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/mumps--_gb_1.mp3"
+                sentenceAudio: "https://translate.google.com/translate_tts?ie=UTF-8&q=Mumps%20is%20a%20childhood%20illness.&tl=en&total=1&idx=0&textlen=32&client=tw-ob&prev=input&ttsspeed=0.5"
             },
             {
                 word: "measles",
@@ -583,7 +574,7 @@
                 example: "Measles can be prevented by vaccine.",
                 examplePersian: "سرخک با واکسن قابل پیشگیری است.",
                 wordAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/measles--_gb_1.mp3",
-                sentenceAudio: "https://ssl.gstatic.com/dictionary/static/sounds/20200429/measles--_gb_1.mp3"
+                sentenceAudio: "https://translate.google.com/translate_tts?ie=UTF-8&q=Measles%20can%20be%20prevented%20by%20vaccine.&tl=en&total=1&idx=0&textlen=41&client=tw-ob&prev=input&ttsspeed=0.5"
             }
         ];
 
@@ -605,13 +596,10 @@
                         <p class="example-english">مثال: ${item.example}</p>
                         <p class="example-persian">ترجمه: ${item.examplePersian}</p>
                         <div class="audio-controls">
-                            <button class="audio-btn word-btn" data-audio="${item.wordAudio}" data-word="${item.word}">
+                            <button class="audio-btn word-btn" data-audio="${item.wordAudio}" data-word="${item.word}" data-type="word">
                                 <i class="fas fa-volume-up"></i> تلفظ واژه
                             </button>
-                            <button class="audio-btn example-btn" data-audio="${item.wordAudio}" data-word="${item.word}">
-                                <i class="fas fa-redo"></i> تکرار واژه
-                            </button>
-                            <button class="audio-btn sentence-btn" data-audio="${item.sentenceAudio}" data-word="${item.word}">
+                            <button class="audio-btn sentence-btn" data-audio="${item.sentenceAudio}" data-word="${item.word}" data-type="sentence">
                                 <i class="fas fa-play-circle"></i> تلفظ جمله
                             </button>
                         </div>
@@ -626,30 +614,33 @@
                 button.addEventListener('click', function() {
                     const audioUrl = this.getAttribute('data-audio');
                     const word = this.getAttribute('data-word');
-                    const buttonType = Array.from(this.classList).find(cls => cls.includes('btn'));
-                    playAudio(audioUrl, word, buttonType);
+                    const type = this.getAttribute('data-type');
+                    playAudio(audioUrl, word, type);
                 });
             });
         }
 
         // تابع پخش صدا
-        function playAudio(url, word, buttonType) {
+        function playAudio(url, word, type) {
             const audio = new Audio(url);
             
             // نمایش پیام مناسب برای هر نوع دکمه
-            const buttonMessages = {
-                'word-btn': `در حال پخش تلفظ واژه "${word}"...`,
-                'example-btn': `در حال تکرار تلفظ واژه "${word}"...`,
-                'sentence-btn': `در حال پخش تلفظ جمله مثال برای "${word}"...`
-            };
-            
-            // در محیط واقعی، این پیام می‌تواند به کاربر نشان داده شود
-            console.log(buttonMessages[buttonType] || `در حال پخش صدا برای "${word}"...`);
+            if (type === 'word') {
+                console.log(`در حال پخش تلفظ واژه "${word}"...`);
+            } else if (type === 'sentence') {
+                console.log(`در حال پخش تلفظ جمله مثال برای "${word}"...`);
+            }
             
             audio.play().catch(error => {
                 console.log(`خطا در پخش صدا برای ${word}:`, error);
                 if (error.name === 'NotAllowedError') {
                     alert(`لطفاً اجازه پخش صدا را در مرورگر خود فعال کنید.`);
+                } else if (error.name === 'AbortError') {
+                    console.log('پخش صدا متوقف شد.');
+                } else {
+                    // برای جملات، از Google TTS API استفاده می‌کنیم
+                    // اگر خطایی رخ داد، پیام مناسب نمایش دهید
+                    console.log('ممکن است نیاز به اجازه دسترسی به صدا داشته باشید.');
                 }
             });
         }
